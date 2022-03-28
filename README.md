@@ -8,6 +8,9 @@ Using Deep Embedded Connectivity-Based Parcellation for striatal subdivisions
 
 In FCP50Subjects dir, showing parcellations with 3, 6, 7 and 8 parcel numbers. These results are obtained by DECBP framwork and FCP datasets, resampled to 2mm resolution as well.
 
+# How to run
+python DECBP.py
+
 # Package dependency
 scikit-lean==0.23.1
 scipy==1.6.2
