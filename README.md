@@ -12,7 +12,7 @@ In FCP50Subjects dir, showing parcellations with 3, 6, 7 and 8 parcel numbers. T
 python DECBP.py
 
 # Package dependency
-scikit-lean==0.23.1
+·scikit-lean==0.23.1
 scipy==1.6.2
 nibabel==3.1.1
 numpy==1.20.2
