@@ -23,8 +23,7 @@ You can revise epoch number and convergence condition according to your dataset.
 * ./DECBP/Reluxxcluster/dae_middletrain.npy  the features in the embedded space
 * ./DECBP/Reluxxcluster/LabelFCP_train.npy the parcellation results for train dataset
 * ./DECBP/Reluxxcluster/GroupLabelFCP_train.npy the group parcellation results for train dataset
-* ./DECBP/Reluxxcluster/GroupLabelFCP_train.nii the group parcellation visualized results for train dataset
-These results all contain three parts, pretrain results(just autoencoders and parcellated initialization), minimum trainloss results, and final stable results(little label changed)
+* ./DECBP/Reluxxcluster/GroupLabelFCP_train.nii the group parcellation visualized results for train dataset  These results all contain three parts, pretrain results(just autoencoders and parcellated initialization), minimum trainloss results, and final stable results(little label changed)
 
 
 * ./DECBP/Reluxxcluster/ProResultsclusterxx/parcels.nii  the group parcellation visualized results for test dataset
