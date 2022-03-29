@@ -12,7 +12,7 @@ In FCP50Subjects dir, showing parcellations with 3, 6, 7 and 8 parcel numbers. T
 python DECBP.py
 
 ## Data
-A numpy file with 3 dimenssion, subject × voxle × feature. The feature should be connectivity profiles, etc. For instance, the sample files
+A numpy file with 3 dimenssion, subject × voxle × feature. The feature should be connectivity profiles, etc. For instance, the sample files in Tag DECBP:
 * "eta_putamen_caudateFCPtrainhighpassleft.npy" (this is train dataset)
 * "eta_putamen_caudateFCPtesthighpassleft.npy" (this file is not necessary due to the unsupervised learning, you could copy train dataset with this name)
 ## Parameters
