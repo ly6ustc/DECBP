@@ -1,6 +1,6 @@
 # DECBP
 
-Using Deep Embedded Connectivity-Based Parcellation for striatal subdivisions, see "Striatal Subdivisions Estimated via Deep Embedded Clustering With Application to Parkinson's Disease" for more details.
+Using Deep Embedded Connectivity-Based Parcellation for striatal subdivisions, see ["Striatal Subdivisions Estimated via Deep Embedded Clustering With Application to Parkinson's Disease"](https://pages.github.com/) for more details.
 
 # Introduction
 
