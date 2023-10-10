@@ -526,7 +526,7 @@ if __name__ == '__main__':
     roi_mask[brain == 73] = True  # putamen_L
     # roi_mask[brain == 74] = True  # putamen_R
 
-    for n_clusters in range(6, 10):
+    for n_clusters in range(2, 10):
         outputpath = path + 'DECBP/Relu' + str(n_clusters) + 'cluster'
         if not os.path.exists(outputpath):
             os.makedirs(outputpath)
@@ -536,7 +536,7 @@ if __name__ == '__main__':
             t = 0.0001
         else:
             t = (n_clusters-1) // 5 * 5 * 0.0001
-        dec.train(eta, batch_size=batchsz, epochs=5, inters=2, stopthreshold=t)
+        dec.train(eta, batch_size=batchsz, epochs=10000, inters=2, stopthreshold=t)
 
         feat = np.load(outputpath + '/GroupLabel' + 'FCP_train' + '.npy')
         save_nifti(outputpath + "/GroupLabelFCP_train.nii", feat.transpose(), roi_mask)
@@ -555,7 +555,7 @@ if __name__ == '__main__':
 
     data = np.load(path + key).astype(np.float32)
     device = torch.device("cuda:0")
-    for i in range(6, 10):
+    for i in range(2, 10):
         modelpath = path + 'DECBP/Relu'+str(i)+'cluster'+'/ckpt/FCP_trainDECtrain_nochanges.pkl'
         model = torch.load(modelpath).to(device)
         model.setPretrain(False)
@@ -563,7 +563,7 @@ if __name__ == '__main__':
         x = torch.from_numpy(data.reshape(-1, data.shape[-1]))
         with torch.no_grad():
             _, q = model(x.to(device))
-            q = q.reshape([-1, data.shape[-1], i])
+            q = q.reshape([-1, data.shape[-2], i])
             pro, pred = torch.max(q.mean(dim=0), dim=1)
             pred = pred.data.cpu().numpy()
             pro = pro.data.cpu().numpy()
